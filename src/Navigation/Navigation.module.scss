@@ -1,0 +1,22 @@
+.navigation {
+  &List {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-right: 98px;
+    width: 405px;
+    justify-content: space-between;
+  }
+
+  &Link {
+    text-decoration: none;
+    color: black;
+
+    font-size: 16px;
+    transition: 100ms ease-in-out;
+
+    &:hover {
+      color: grey;
+    }
+  }
+}
