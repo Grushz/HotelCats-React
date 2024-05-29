@@ -1,0 +1,83 @@
+@import "/src/assets/mixinStyle.scss";
+
+.mainPicture {
+    height: 504px;
+    background-image: url("public/images/mainCat.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    &::before {
+        content: url("public/images/Mask Group.png");
+        position: absolute;
+    }
+}
+
+
+.FirstPictureContent {
+    width: 346px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 198px;
+    z-index: 10;
+}
+
+.townMarker {
+    font-family: "Rubik", Arial, sans-serif;
+    position: relative;
+    top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0;
+    @include reset
+}
+
+.mainTitle {
+    font-size: 62px;
+    font-family: "Rubik", Arial, sans-serif;
+    z-index: 2;
+    position: relative;
+    left: -2px;
+    @include reset
+}
+
+.mainText {
+    font-family: "Rubik", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0;
+    padding-top: 5px;
+    z-index: 2;
+    @include reset
+}
+
+.button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-top: 40px;
+
+    &::after {
+        content: url("images/paw.svg");
+        position: absolute;
+        right: 7px;
+        top: 7px;
+      }
+    
+      &:hover {
+        transform: scale(1.1);
+        background-color: #ff7236;
+        color: white;
+      }
+    
+      &:hover::after {
+        content: url("images/paw-rev.svg");
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      }
+}

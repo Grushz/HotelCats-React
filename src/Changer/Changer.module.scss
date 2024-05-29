@@ -1,0 +1,75 @@
+.changer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.dot {
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    height: 12px;
+    margin-right: 403px;
+}
+
+.sliderDot {
+    border: none;
+    box-sizing: content-box;
+    background-color: #e1e1e1;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: 200ms ease-in-out;
+
+
+    &:hover {
+        transform: scale(1.4);
+        background-color: #fac663;
+    }
+}
+
+.sliderDot-active {
+    cursor: default;
+    background-color: #fac663;
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 82px;
+    margin-right: 168px;
+}
+
+.arrowBack {
+    border: none;
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 18px -8px rgba(0, 0, 0, 0.3);
+    transition: 200ms ease-in-out;
+
+
+    &:hover {
+        transform: scale(1.25);
+    }
+}
+
+.arrowNext {
+    border: none;
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 18px -8px rgba(0, 0, 0, 0.3);
+    transition: 200ms ease-in-out;
+
+
+    &:hover {
+        transform: scale(1.25);
+    }
+}
