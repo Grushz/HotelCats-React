@@ -3,6 +3,7 @@ import Header from "../Header/Header.tsx";
 import FirstSectionPicture from '../FirstSectionPicture/FirstSectionPicture.tsx';
 import SecondSectionAdvanteges from '../SecondSectionAdvantages/SecondSectionAdvantages.tsx';
 import ThirdSectionRoom from '../ThirdSectionRoom/ThirdSectionRoom.tsx';
+import FourthSectionReview from '../FourthSectionReview/FourthSectionReview.tsx';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
                 <FirstSectionPicture/>
                 <SecondSectionAdvanteges/>
                 <ThirdSectionRoom/>
+                <FourthSectionReview/>
             </main>
         
         </>

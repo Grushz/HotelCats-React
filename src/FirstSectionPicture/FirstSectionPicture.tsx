@@ -1,5 +1,5 @@
 import styles from './FirstSectionPicture.module.scss';
-import ButtonReservation from '../Button/ButtonReservation';
+import ButtonReservation from '../Buttons/ButtonReservation';
 import { useState } from 'react';
 
 function FirstSectionPicture () {

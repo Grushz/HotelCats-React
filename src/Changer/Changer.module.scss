@@ -1,3 +1,5 @@
+@import "/src/assets/mixinStyle.scss";
+
 .changer {
     display: flex;
     width: 100%;
@@ -22,6 +24,7 @@
     height: 12px;
     border-radius: 50%;
     transition: 200ms ease-in-out;
+    @include reset;
 
 
     &:hover {
@@ -51,7 +54,7 @@
     cursor: pointer;
     box-shadow: 0 0 18px -8px rgba(0, 0, 0, 0.3);
     transition: 200ms ease-in-out;
-
+    @include reset;
 
     &:hover {
         transform: scale(1.25);
@@ -67,7 +70,7 @@
     cursor: pointer;
     box-shadow: 0 0 18px -8px rgba(0, 0, 0, 0.3);
     transition: 200ms ease-in-out;
-
+    @include reset;
 
     &:hover {
         transform: scale(1.25);

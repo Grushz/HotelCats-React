@@ -49,3 +49,20 @@
         font-size: 19px;
     }
 }
+
+.button {
+    background-color: #ff7236;
+    color: white;
+    margin-top: 25px;
+
+    &::after {
+        content: url("images/paw-rev.svg");
+        position: absolute;
+        right: 7px;
+        top: 7px;
+      }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+    }
