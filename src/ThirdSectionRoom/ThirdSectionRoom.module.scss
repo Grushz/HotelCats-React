@@ -1,7 +1,11 @@
+@import "/src/assets/mixinStyle.scss";
+
 .roomsTitle {
     text-align: center;
     margin-top: 140px;
     padding-bottom: 70px;
+
+    @include middleTitle;
   }
   
   

@@ -4,6 +4,8 @@ import FirstSectionPicture from '../FirstSectionPicture/FirstSectionPicture.tsx'
 import SecondSectionAdvanteges from '../SecondSectionAdvantages/SecondSectionAdvantages.tsx';
 import ThirdSectionRoom from '../ThirdSectionRoom/ThirdSectionRoom.tsx';
 import FourthSectionReview from '../FourthSectionReview/FourthSectionReview.tsx';
+import FifthSectionContacts from '../FifthSectionContacts/FifthSectionContacts.tsx';
+import Footer from '../Footer/Footer.tsx';
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
                 <SecondSectionAdvanteges/>
                 <ThirdSectionRoom/>
                 <FourthSectionReview/>
+                <FifthSectionContacts/>
+                <Footer/>
             </main>
         
         </>

@@ -1,3 +1,5 @@
+@import "/src/assets/mixinStyle.scss";
+
 .reviews {
     position: relative;
   }
@@ -7,6 +9,8 @@
     margin-top: 140px;
     padding-bottom: 70px;
     text-align: center;
+
+    @include middleTitle;
   }
 
   

@@ -1,3 +1,5 @@
+
+
 @mixin reset {
     margin: 0;
     padding: 0;
@@ -6,4 +8,11 @@
 @mixin middleTitle {
   font-family: "Rubik", Arial, sans-serif;
   font-size: 36px;
+}
+
+@mixin lowTitle {}
+
+@mixin link {
+  text-decoration: none;
+  color: black;
 }
