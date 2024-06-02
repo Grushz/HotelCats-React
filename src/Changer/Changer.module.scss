@@ -34,7 +34,7 @@
     }
 }
 
-.sliderDot-active {
+.sliderDotActive {
     cursor: default;
     background-color: #fac663;
 }
@@ -55,6 +55,10 @@
     cursor: pointer;
     box-shadow: 0 0 18px -8px rgba(0, 0, 0, 0.3);
     transition: 200ms ease-in-out;
+    background-image: url("images/leftArrow.svg");
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: center;
     @include reset;
 
     &:hover {
@@ -71,6 +75,10 @@
     cursor: pointer;
     box-shadow: 0 0 18px -8px rgba(0, 0, 0, 0.3);
     transition: 200ms ease-in-out;
+    background-image: url("images/rightArrow.svg");
+    background-repeat: no-repeat;
+    background-size: 21%;
+    background-position: center;
     @include reset;
 
     &:hover {

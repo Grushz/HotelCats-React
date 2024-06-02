@@ -2,7 +2,11 @@ import { useState } from 'react';
 import Styles from './Room.module.scss';
 import ButtonReservation from '../Buttons/ButtonReservation';
 
-const Room2 = () => {
+interface IRoom {
+    className?: string;
+}
+
+const Room2 = ({className}: IRoom) => {
     
     const [room] = useState({
        
@@ -21,8 +25,8 @@ const Room2 = () => {
 
 
     return (
-        <div className={Styles.room}>
-            <img className={Styles.roomImg} src={picture.img1} alt="Милые котики в комнате"/>
+        <div className={`${Styles.room} ${className}`}>
+            <img className={Styles.roomImg} src={picture.img2} alt="Милые котики в комнате"/>
                 <div className={Styles.roomInfo}>
                     <h3 className={Styles.lowTitle}>{room.title}</h3>
                     <ul className={Styles.roomList}>

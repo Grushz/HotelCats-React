@@ -1,36 +1,34 @@
 @import "/src/assets/mixinStyle.scss";
 
 .reviews {
-    position: relative;
-  }
-  
-  .reviewsTitle {
-    display: block;
-    margin-top: 140px;
-    padding-bottom: 70px;
-    text-align: center;
+  position: relative;
 
-    @include middleTitle;
-  }
-
-  
-  .reviewCard {
-    display: grid;
-    position: relative;
-    right: 0;
-    margin-left: 98px;
-    grid-template-columns: 470px 470px 470px;
-    grid-template-rows: 206px;
-    grid-column-gap: 30px;
-    margin-bottom: 55px;
-  }
-
-  .reviews::after {
-    content: url("Images/pawDown.svg");
+  &::after {
+    content: url("images/pawDown.svg");
     position: absolute;
     top: -105px;
     right: -35px;
     z-index: 0;
   }
+}
 
-  
+.reviewsTitle {
+  display: block;
+  margin-top: 140px;
+  padding-bottom: 70px;
+  text-align: center;
+
+  @include middleTitle;
+}
+
+
+.reviewCard {
+  display: grid;
+  position: relative;
+  right: 0;
+  margin-left: 98px;
+  grid-template-columns: 470px 470px 470px;
+  grid-template-rows: 206px;
+  grid-column-gap: 30px;
+  margin-bottom: 55px;
+}
