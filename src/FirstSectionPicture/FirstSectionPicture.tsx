@@ -11,7 +11,7 @@ function FirstSectionPicture () {
 
     return (
 <section className={styles.mainPicture}>
-<div className={styles.FirstPictureContent}>
+<div className={styles.firstPictureContent}>
     <p className={styles.townMarker} >{obj.town}</p>
     <h1 className={styles.mainTitle} >{obj.mainTitle}</h1>
     <p className={styles.mainText}>{obj.mainText}</p>

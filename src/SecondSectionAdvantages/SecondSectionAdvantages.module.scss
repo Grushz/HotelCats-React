@@ -4,6 +4,10 @@
     position: relative;
 }
 
+.lowTitle {
+    @include reset;
+}
+
 .advantegesTitle {
     margin-top: 140px;
     padding-bottom: 70px;
@@ -60,3 +64,4 @@
 .identationZero {
 @include reset;
 }
+

@@ -10,7 +10,11 @@
   font-size: 36px;
 }
 
-@mixin lowTitle {}
+@mixin lowTitle {
+  font-family: "Rubik", Arial, sans-serif;
+  font-size: 20px;
+  margin: 25px 0 15px 0;
+}
 
 @mixin link {
   text-decoration: none;

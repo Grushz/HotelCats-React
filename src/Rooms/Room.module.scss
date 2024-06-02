@@ -1,3 +1,5 @@
+@import "/src/assets/mixinStyle.scss";
+
 .room {
     display: flex;
     justify-content: space-between;
@@ -5,6 +7,10 @@
     margin-bottom: 55px;
     z-index: 5;
     opacity: 1;
+}
+
+.lowTitle {
+    @include lowTitle;
 }
 
 .roomImg {
@@ -29,10 +35,12 @@
 }
 
 .roomList {
+    @include reset;
     list-style: none;
     width: 330px;
     padding-left: 9px;
     cursor: default;
+    
 }
 
 .roomLi {
@@ -40,7 +48,7 @@
 
 
     &::before {
-        content: url("Images/point.png");
+        content: url("images/point.png");
         position: relative;
         right: 8px;
     }
