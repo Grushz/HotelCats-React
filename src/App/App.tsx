@@ -6,6 +6,7 @@ import ThirdSectionRoom from '../ThirdSectionRoom/ThirdSectionRoom.tsx';
 import FourthSectionReview from '../FourthSectionReview/FourthSectionReview.tsx';
 import FifthSectionContacts from '../FifthSectionContacts/FifthSectionContacts.tsx';
 import Footer from '../Footer/Footer.tsx';
+// import PopUp from '../PopUp/PopUpMain.tsx';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                 <FourthSectionReview/>
                 <FifthSectionContacts/>
                 <Footer/>
+                
             </main>
         
         </>

@@ -17,11 +17,9 @@ const PopUp = () => {
                         <input className={styles.personinfo} type="email" name="e-mail" placeholder="E-mail" />
                         <div className={styles.inputDate}>
                             <label>Дата заезда с </label>
-                            <input type="text" className={styles.date} name="datein" placeholder="26.01.2020"
-                                onFocus="this.type='date'" onblur="this.type='text'" />
+                            <input type="text" className={styles.date} name="datein" placeholder="26.01.2020" />
                             <label> по </label>
-                            <input type="text" className={styles.date} name="dateout" placeholder="26.02.2020"
-                                onFocus="this.type='date'" onblur="this.type='text'" />
+                            <input type="text" className={styles.date} name="dateout" placeholder="26.02.2020"/>
                         </div>
                         <button className={styles.buttonReservation}>
                             Отправить заявку
