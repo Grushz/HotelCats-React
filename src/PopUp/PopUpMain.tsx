@@ -1,10 +1,10 @@
 import styles from './PopUp.module.scss';
-
+import ButtonReservation from '../Buttons/ButtonReservation';
 
 const PopUp = () => {
 
     return (
-        <div className={styles.popupWrapper}>
+        <div className={styles.popupWrapper} >
             <div className={styles.popupWrapperInner}>
                 <form className={styles.formMain}>
                     <div className={styles.popup}>
@@ -21,23 +21,12 @@ const PopUp = () => {
                             <label> по </label>
                             <input type="text" className={styles.date} name="dateout" placeholder="26.02.2020"/>
                         </div>
-                        <button className={styles.buttonReservation}>
-                            Отправить заявку
-                        </button>
+                        <ButtonReservation className={styles.buttonReservation} />
                     </div>
                 </form>
             </div>
 
-            <div className={styles.popupAccept}>
-                <button type="button" className={styles.closeAccept }>
-                    <img src="images/close.svg"/>
-                </button>
-                <h2 className={styles.popupAcceptTitle}>Спасибо за заявку!</h2>
-                <p className={styles.text}>Мы свяжемся с вами в ближайшее время</p>
-                <button className={styles.buttonAccept }>
-                    Ок
-                </button>
-            </div >
+            
         </div >
             );
     }
