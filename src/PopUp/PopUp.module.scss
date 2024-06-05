@@ -1,3 +1,5 @@
+@import "/src/assets/mixinStyle.scss"; 
+
 .popupWrapper {
   position: fixed;
   margin: 0 auto;
@@ -13,6 +15,7 @@
   backdrop-filter: blur(8px);
   background: rgba(255, 254, 253, 0.8);
   transition: opacity 0.5s linear, visibility 0.5s linear;
+
 }
 
 .popupWrapperInner {
@@ -20,14 +23,11 @@
   height: 100vh;
   width: 570px;
   overflow: scroll;
-}
-
-.popupWrapperInner::-webkit-scrollbar {
-  width: 0;
-}
-
-.popupWrapperInner {
   -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 .popup {
@@ -43,13 +43,14 @@
   border-radius: 10px;
   box-shadow: 0 0 21px -11px rgba(0, 0, 0, 0.72);
   overflow: hidden;
-}
 
-.popup::before {
-  content: url("Images/pawpopup.svg");
-  position: absolute;
-  top: -20px;
-  left: -20px;
+
+  &::before {
+    content: url("images/pawpopup.svg");
+    position: absolute;
+    top: -20px;
+    left: -20px;
+  }
 }
 
 .close {
@@ -64,17 +65,23 @@
   box-sizing: border-box;
   transition: 200ms ease-in-out;
   background-image: url("images/close.svg");
-}
 
-.close:hover {
+
+&:hover {
   transform: scale(1.3);
 }
-
+}
 .popuptitle {
+  @include middleTitle;
+  @include reset;
+
   font-size: 28px;
   padding-top: 70px;
   padding-bottom: 50px;
+
+  
 }
+
 
 .personinfo {
   box-sizing: border-box;
@@ -143,14 +150,16 @@
   overflow: hidden;
 
 
-&::before {
-  content: url("Images/pawAcc.svg");
-  position: absolute;
-  bottom: -20px;
-  left: -20px;
+  &::before {
+    content: url("images/pawAcc.svg");
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+  }
 }
-}
+
 .closeAccept {
+  @include reset;
   position: absolute;
   top: 40px;
   right: 40px;
@@ -159,14 +168,16 @@
   background-color: white;
   box-sizing: border-box;
   transition: 300ms ease-in-out;
+  
 
-
-&:hover {
-  transform: scale(1.3);
-}
+  &:hover {
+    transform: scale(1.3);
+  }
 }
 
 .popupAcceptTitle {
+  @include reset;
+  @include middleTitle;
   font-size: 28px;
   padding-top: 70px;
   padding-bottom: 25px;
@@ -192,19 +203,24 @@
   transition: 300ms ease-in-out;
 
 
-&::after {
-  content: url("images/paw-rev.svg");
-  position: absolute;
-  right: 7px;
-  top: 7px;
+  &::after {
+    content: url("images/paw-rev.svg");
+    position: absolute;
+    right: 7px;
+    top: 7px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
-&:hover {
-  transform: scale(1.2);
-}
-}
 .pawAcc {
   position: absolute;
   left: -10px;
   bottom: -15px;
+}
+
+.text {
+  @include reset;
 }

@@ -1,12 +1,16 @@
 import styles from './PopUp.module.scss';
-import ButtonReservation from '../Buttons/ButtonReservation';
+import ButtonSend from '../Buttons/ButtonSend';
 
 const PopUp = () => {
+
+        function handleSubmit(e: { preventDefault: () => void; }) {
+          e.preventDefault();
+        }
 
     return (
         <div className={styles.popupWrapper} >
             <div className={styles.popupWrapperInner}>
-                <form className={styles.formMain}>
+                <form className={styles.formMain} onSubmit={handleSubmit}>
                     <div className={styles.popup}>
                         <button className={styles.close}>
                         </button>
@@ -21,7 +25,7 @@ const PopUp = () => {
                             <label> по </label>
                             <input type="text" className={styles.date} name="dateout" placeholder="26.02.2020"/>
                         </div>
-                        <ButtonReservation className={styles.buttonReservation} />
+                        <ButtonSend className={styles.buttonReservation} />
                     </div>
                 </form>
             </div>

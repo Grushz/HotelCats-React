@@ -1,21 +1,21 @@
 import styles from './ButtonReservation.module.scss';
 import { useState } from 'react';
-import PopUp from '../PopUp/PopUpMain';
+import PopUpAccept from '../PopUp/PopUpAccept.tsx';
 
-interface IButtonReservation {
+interface IButtonSend {
     className?: string;
 }
 
-const ButtonReservation = ({className}: IButtonReservation) => {
+const ButtonSend = ({className}: IButtonSend) => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     return (
         <>
         <button className={`${styles.buttonReservation} ${className}`} onClick={() => setIsModalOpen(true)}>
-        Забронировать
+        Отправить заявку
     </button>
-    {isModalOpen && <PopUp/>}
+    {isModalOpen && <PopUpAccept/>}
     </>
     );
 };
 
-export default ButtonReservation;
+export default ButtonSend;

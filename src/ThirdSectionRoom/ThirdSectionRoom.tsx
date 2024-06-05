@@ -5,12 +5,12 @@ import Room2 from '../Rooms/Room2.tsx';
 import Room3 from '../Rooms/Room3.tsx';
 
 const ThirdSectionRoom = () => {
-
     
+  
     return (
         <section className={styles.rooms} id="part2">
             <h2 className={styles.roomsTitle}>Номера</h2>
-            <Room1 className={styles.show}/>
+            <Room1 className={styles.show} />
             <Room2 className={styles.hidden}/>
             <Room3 className={styles.hidden}/>
            <Changer/>
