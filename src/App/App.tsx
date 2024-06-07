@@ -22,10 +22,10 @@ function App() {
                 <ThirdSectionRoom/>
                 <FourthSectionReview/>
                 <FifthSectionContacts/>
-                <Footer/>
+                
                 
             </main>
-        
+            <Footer/>
         </>
     )
 }

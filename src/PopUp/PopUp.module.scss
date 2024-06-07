@@ -1,4 +1,4 @@
-@import "/src/assets/mixinStyle.scss"; 
+@import "/src/assets/mixinStyle.scss";
 
 .popupWrapper {
   position: fixed;
@@ -67,10 +67,11 @@
   background-image: url("images/close.svg");
 
 
-&:hover {
-  transform: scale(1.3);
+  &:hover {
+    transform: scale(1.3);
+  }
 }
-}
+
 .popuptitle {
   @include middleTitle;
   @include reset;
@@ -79,7 +80,7 @@
   padding-top: 70px;
   padding-bottom: 50px;
 
-  
+
 }
 
 
@@ -168,7 +169,7 @@
   background-color: white;
   box-sizing: border-box;
   transition: 300ms ease-in-out;
-  
+
 
   &:hover {
     transform: scale(1.3);

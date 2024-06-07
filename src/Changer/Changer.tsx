@@ -6,8 +6,11 @@ import Styles from './Changer.module.scss';
 interface DotState {
   activeIndex: number; // Индекс активной точки
 }
+interface IChangerProps {
+  rooms: Room[];
+}
 
-const Changer: React.FC = () => {
+const Changer: React.FC = ({rooms}: IChangerProps) => {
 
   const [dotState, setDotState] = useState<DotState>({ activeIndex: 0 }); // Состояние точек
 

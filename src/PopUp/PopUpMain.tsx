@@ -1,9 +1,10 @@
 import styles from './PopUp.module.scss';
 import ButtonSend from '../Buttons/ButtonSend';
+import { FormEvent } from 'react';
 
 const PopUp = () => {
 
-        function handleSubmit(e: { preventDefault: () => void; }) {
+        function handleSubmit(e: FormEvent<HTMLFormElement>) {
           e.preventDefault();
         }
 
@@ -17,11 +18,11 @@ const PopUp = () => {
                         <h2 className={styles.popuptitle}>Забронировать номер</h2>
                         <input className={styles.personinfo} type="text" name="username" placeholder="Ваше имя" />
                         <input className={styles.personinfo} type="text" name="petname" placeholder="Имя Питомца" />
-                        <input className={styles.personinfo} type="tel" name="phone-number" placeholder="Телефон" />
+                        <input className={styles.personinfo} type="tel" name="phone-number" placeholder="Телефон" /> 
                         <input className={styles.personinfo} type="email" name="e-mail" placeholder="E-mail" />
                         <div className={styles.inputDate}>
                             <label>Дата заезда с </label>
-                            <input type="text" className={styles.date} name="datein" placeholder="26.01.2020" />
+                            <input type="text" className={styles.date} name="datein" placeholder="26.01.2020"/>
                             <label> по </label>
                             <input type="text" className={styles.date} name="dateout" placeholder="26.02.2020"/>
                         </div>
