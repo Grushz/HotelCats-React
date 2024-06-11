@@ -1,14 +1,17 @@
-import { useState } from 'react';
+//import { useState } from 'react';
 import Styles from './Room.module.scss';
 import ButtonReservation from '../Buttons/ButtonReservation';
 
 interface IRoom {
     className?: string;
+    roomNumber: number;
 }
 
 
-const Room1 = ({ className }: IRoom) => {
 
+const Room1 = ({ className, roomNumber }: IRoom ) => {
+    
+    
     const rooms = [{
         id: 1,
         title: 'Эконом плюс',
@@ -36,35 +39,40 @@ const Room1 = ({ className }: IRoom) => {
         id: 1,
         img: 'images/CatRoom1.png',
     },
-    { 
+    /*{ 
         id: 2,
         img: 'images/CatRoom2.png', 
     },
     { 
         id: 3,
         img: 'images/CatRoom3.png', 
-    },
+    },*/
 
 
     ];
 
-    const picturesInfo = picture.map(picture => {
+    const picturesInfo = picture.map(function(picture, roomNumber) {
+        
+        
         return (
-            <img className={Styles.roomImg} key={picture.id} src={picture.img} alt="Милые котики в комнате" />
+            <img className={Styles.roomImg} key={roomNumber} src={picture.img} alt="Милые котики в комнате" />
         )
-    })
+        
+    });
 
-    const itemsInfo = rooms.map(room => {
+    const itemsInfo = rooms.map(function(room, roomNumber) {
+        if (roomNumber < 1) {
         return (
             <>
-                <h3 className={Styles.lowTitle}>{room.title}</h3>
-                <ul className={Styles.roomList}>
-                    <li className={Styles.roomLi} key={room.id}>Площадь - {room.square}<sup><small>2</small></sup></li>
-                    <li className={Styles.roomLi} key={room.id}>Размеры (ШxГxВ) - {room.size} см</li>
-                    <li className={Styles.roomLi} key={room.id}>Цена за сутки: {room.cost}&#8381;</li>
+                <h3 className={Styles.lowTitle} key={room.id}>{room.title}</h3>
+                <ul className={Styles.roomList} key={room.id}>
+                    <li className={Styles.roomLi} >Площадь - {roomNumber}{room.square}<sup><small>2</small></sup></li>
+                    <li className={Styles.roomLi} >Размеры (ШxГxВ) - {room.size} см</li>
+                    <li className={Styles.roomLi} >Цена за сутки: {room.cost}&#8381;</li>
                 </ul>
             </>
         );
+    }
     });
 
 

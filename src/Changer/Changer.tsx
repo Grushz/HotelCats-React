@@ -6,13 +6,13 @@ import Styles from './Changer.module.scss';
 interface DotState {
   activeIndex: number; // Индекс активной точки
 }
-interface IChangerProps {
+/*interface IChangerProps {
   rooms: Room[];
-}
+} */
 
-const Changer: React.FC = ({rooms}: IChangerProps) => {
+const Changer: React.FC = (/*{rooms}: IChangerProps*/) => {
 
-  const [dotState, setDotState] = useState<DotState>({ activeIndex: 0 }); // Состояние точек
+  const [State, setDotState] = useState<DotState>({ activeIndex: 0 }); // Состояние точек
 
   const handleSliderDotClick = (index: number) => {
     setDotState({ activeIndex: index }); // Сделать точку с индексом `index` активной
@@ -20,12 +20,12 @@ const Changer: React.FC = ({rooms}: IChangerProps) => {
   };
 
   const handleArrowNextClick = () => {
-    const nextIndex = (dotState.activeIndex + 1) % 3; 
+    const nextIndex = (State.activeIndex + 1) % 3; 
     setDotState({ activeIndex: nextIndex }); 
   };
 
   const handleArrowBackClick = () => {
-    const prevIndex = (dotState.activeIndex - 1 + 3) % 3; 
+    const prevIndex = (State.activeIndex - 1 + 3) % 3; 
     setDotState({ activeIndex: prevIndex }); 
     console.log(prevIndex);
   };
@@ -35,7 +35,7 @@ const Changer: React.FC = ({rooms}: IChangerProps) => {
       <div className={Styles.dot}>
         {Array.from({ length: 3 }).map((_, index) => (
           <button key={index}
-            className={index === dotState.activeIndex ? Styles.sliderDotActive : Styles.sliderDot}
+            className={index === State.activeIndex ? Styles.sliderDotActive : Styles.sliderDot}
             onClick={() => handleSliderDotClick(index)}
           />
         ))}
