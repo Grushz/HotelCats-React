@@ -11,7 +11,6 @@ interface DotState {
 } */
 
 const Changer: React.FC = (/*{rooms}: IChangerProps*/) => {
-
   const [State, setDotState] = useState<DotState>({ activeIndex: 0 }); // Состояние точек
 
   const handleSliderDotClick = (index: number) => {
@@ -29,6 +28,8 @@ const Changer: React.FC = (/*{rooms}: IChangerProps*/) => {
     setDotState({ activeIndex: prevIndex }); 
     console.log(prevIndex);
   };
+
+  
   
   return (
     <div className={Styles.changer}>

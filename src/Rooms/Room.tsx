@@ -9,9 +9,9 @@ interface IRoom {
 
 
 
-const Room1 = ({ className, roomNumber }: IRoom ) => {
-    
-    
+const Room = ({ className, roomNumber }: IRoom) => {
+
+
     const rooms = [{
         id: 1,
         title: 'Эконом плюс',
@@ -39,40 +39,40 @@ const Room1 = ({ className, roomNumber }: IRoom ) => {
         id: 1,
         img: 'images/CatRoom1.png',
     },
-    /*{ 
-        id: 2,
-        img: 'images/CatRoom2.png', 
-    },
-    { 
-        id: 3,
-        img: 'images/CatRoom3.png', 
-    },*/
+        /*{ 
+            id: 2,
+            img: 'images/CatRoom2.png', 
+        },
+        { 
+            id: 3,
+            img: 'images/CatRoom3.png', 
+        },*/
 
 
     ];
+   
+    const picturesInfo = picture.map(function (picture, roomNumber) {
 
-    const picturesInfo = picture.map(function(picture, roomNumber) {
-        
-        
+
         return (
             <img className={Styles.roomImg} key={roomNumber} src={picture.img} alt="Милые котики в комнате" />
         )
-        
+
     });
 
-    const itemsInfo = rooms.map(function(room, roomNumber) {
+    const itemsInfo = rooms.map(function (room, roomNumber) {
         if (roomNumber < 1) {
-        return (
-            <>
-                <h3 className={Styles.lowTitle} key={room.id}>{room.title}</h3>
-                <ul className={Styles.roomList} key={room.id}>
-                    <li className={Styles.roomLi} >Площадь - {roomNumber}{room.square}<sup><small>2</small></sup></li>
-                    <li className={Styles.roomLi} >Размеры (ШxГxВ) - {room.size} см</li>
-                    <li className={Styles.roomLi} >Цена за сутки: {room.cost}&#8381;</li>
-                </ul>
-            </>
-        );
-    }
+            return (
+                <>
+                    <h3 className={Styles.lowTitle} key={room.id}>{room.title}</h3>
+                    <ul className={Styles.roomList} key={room.id}>
+                        <li className={Styles.roomLi} >Площадь - {roomNumber}{room.square}<sup><small>2</small></sup></li>
+                        <li className={Styles.roomLi} >Размеры (ШxГxВ) - {room.size} см</li>
+                        <li className={Styles.roomLi} >Цена за сутки: {room.cost}&#8381;</li>
+                    </ul>
+                </>
+            );
+        }
     });
 
 
@@ -91,4 +91,4 @@ const Room1 = ({ className, roomNumber }: IRoom ) => {
     )
 };
 
-export default Room1
+export default Room
