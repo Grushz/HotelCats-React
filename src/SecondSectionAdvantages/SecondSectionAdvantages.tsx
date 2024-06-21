@@ -45,7 +45,7 @@ const advantages = [
     },
 ];
 
-const cardAll = advantages.map((advantage) => {
+const card = advantages.map((advantage) => {
     return (
 
         <div className={styles.card}>
@@ -65,7 +65,7 @@ const SecondSectionAdvanteges = () => {
             <h2 className={styles.advantegesTitle} >Почему мы?</h2>
             <div className={styles.cardAll}>
 
-                {cardAll}
+                {card}
 
 
             </div>
