@@ -5,6 +5,7 @@ import ButtonReservation from '../Buttons/ButtonReservation';
 interface IRoom {
     className?: string;
     roomNumber: number;
+
 }
 
 
@@ -13,14 +14,14 @@ const Room = ({ className, roomNumber }: IRoom) => {
 
 
     const rooms = [{
-        id: 1,
+        id: 0,
         title: 'Эконом плюс',
         square: '0,90 м',
         size: '90x100x180',
         cost: '200',
     },
     {
-        id: 2,
+        id: 1,
         title: 'Комфорт',
         square: '1,13 м',
         size: '100x125x180',
@@ -28,7 +29,7 @@ const Room = ({ className, roomNumber }: IRoom) => {
 
     },
     {
-        id: 3,
+        id: 2,
         title: 'Сьют',
         square: '1,56 м',
         size: '125x125x180',
@@ -36,15 +37,15 @@ const Room = ({ className, roomNumber }: IRoom) => {
     },];
 
     const picture = [{
-        id: 1,
+        id: 0,
         img: 'images/CatRoom1.png',
     },
         /*{ 
-            id: 2,
+            id: 1,
             img: 'images/CatRoom2.png', 
         },
         { 
-            id: 3,
+            id: 2,
             img: 'images/CatRoom3.png', 
         },*/
 
@@ -53,9 +54,9 @@ const Room = ({ className, roomNumber }: IRoom) => {
    
     const picturesInfo = picture.map(function (picture, roomNumber) {
 
-
+        if (roomNumber < 1) {
         return (
-            <img className={Styles.roomImg} key={roomNumber} src={picture.img} alt="Милые котики в комнате" />
+            <img className={Styles.roomImg} key={picture.id} src={picture.img} alt="Милые котики в комнате" />
         )
 
     });
