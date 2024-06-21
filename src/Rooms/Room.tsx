@@ -53,10 +53,9 @@ const Room = ({ className, roomNumber }: IRoom) => {
     ];
    
     const picturesInfo = picture.map(function (picture, roomNumber) {
-
-        if (roomNumber < 1) {
+        
         return (
-            <img className={Styles.roomImg} key={picture.id} src={picture.img} alt="Милые котики в комнате" />
+            <img className={Styles.roomImg} key={roomNumber} src={picture.img} alt="Милые котики в комнате" />
         )
 
     });
@@ -65,8 +64,8 @@ const Room = ({ className, roomNumber }: IRoom) => {
         if (roomNumber < 1) {
             return (
                 <>
-                    <h3 className={Styles.lowTitle} key={room.id}>{room.title}</h3>
-                    <ul className={Styles.roomList} key={room.id}>
+                    <h3 className={Styles.lowTitle} key={roomNumber}>{room.title}</h3>
+                    <ul className={Styles.roomList} key={roomNumber}>
                         <li className={Styles.roomLi} >Площадь - {roomNumber}{room.square}<sup><small>2</small></sup></li>
                         <li className={Styles.roomLi} >Размеры (ШxГxВ) - {room.size} см</li>
                         <li className={Styles.roomLi} >Цена за сутки: {room.cost}&#8381;</li>
