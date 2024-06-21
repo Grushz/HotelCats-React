@@ -2,93 +2,85 @@
 import Styles from './Room.module.scss';
 import ButtonReservation from '../Buttons/ButtonReservation';
 
+
 interface IRoom {
     className?: string;
     roomNumber: number;
-
-}
-
-
-
-const Room = ({ className, roomNumber }: IRoom) => {
-
-
-    const rooms = [{
+  }
+  
+  const Room: React.FC<IRoom> = ({ className, roomNumber }) => {
+    const rooms = [
+      {
         id: 0,
         title: 'Эконом плюс',
         square: '0,90 м',
         size: '90x100x180',
         cost: '200',
-    },
-    {
+      },
+      {
         id: 1,
         title: 'Комфорт',
         square: '1,13 м',
         size: '100x125x180',
         cost: '250',
-
-    },
-    {
+      },
+      {
         id: 2,
         title: 'Сьют',
         square: '1,56 м',
         size: '125x125x180',
         cost: '350',
-    },];
-
-    const picture = [{
+      },
+    ];
+  
+    const pictures = [
+      {
         id: 0,
         img: 'images/CatRoom1.png',
-    },
-        /*{ 
-            id: 1,
-            img: 'images/CatRoom2.png', 
-        },
-        { 
-            id: 2,
-            img: 'images/CatRoom3.png', 
-        },*/
-
-
+      },
+      {
+        id: 1,
+        img: 'images/CatRoom2.png',
+      },
+      {
+        id: 2,
+        img: 'images/CatRoom3.png',
+      },
     ];
-   
-    const picturesInfo = picture.map(function (picture, roomNumber) {
-        
-        return (
-            <img className={Styles.roomImg} key={roomNumber} src={picture.img} alt="Милые котики в комнате" />
-        )
-
-    });
-
-    const itemsInfo = rooms.map(function (room, roomNumber) {
-        if (roomNumber < 1) {
-            return (
-                <>
-                    <h3 className={Styles.lowTitle} key={roomNumber}>{room.title}</h3>
-                    <ul className={Styles.roomList} key={roomNumber}>
-                        <li className={Styles.roomLi} >Площадь - {roomNumber}{room.square}<sup><small>2</small></sup></li>
-                        <li className={Styles.roomLi} >Размеры (ШxГxВ) - {room.size} см</li>
-                        <li className={Styles.roomLi} >Цена за сутки: {room.cost}&#8381;</li>
-                    </ul>
-                </>
-            );
-        }
-    });
-
-
-
-
+  
+    const currentRoom = rooms.find(room => room.id === roomNumber);
+    const currentPicture = pictures.find(picture => picture.id === roomNumber);
+  
     return (
-
-        <div className={`${Styles.room} ${className}`}>
-            {picturesInfo}
-            <div className={Styles.roomInfo}>
-                {itemsInfo}
-
-                <ButtonReservation className={Styles.button} />
-            </div>
+      <div className={`${Styles.room} ${className}`}>
+        {currentPicture && (
+          <img
+            className={Styles.roomImg}
+            src={currentPicture.img}
+            alt="Милые котики в комнате"
+          />
+        )}
+        <div className={Styles.roomInfo}>
+          {currentRoom && (
+            <>
+              <h3 className={Styles.lowTitle}>{currentRoom.title}</h3>
+              <ul className={Styles.roomList}>
+                <li className={Styles.roomLi}>
+                  Площадь - {currentRoom.square}<sup><small>2</small></sup>
+                </li>
+                <li className={Styles.roomLi}>
+                  Размеры (ШxГxВ) - {currentRoom.size} см
+                </li>
+                <li className={Styles.roomLi}>
+                  Цена за сутки: {currentRoom.cost}&#8381;
+                </li>
+              </ul>
+            </>
+          )}
+          <ButtonReservation className={Styles.button} />
         </div>
-    )
-};
-
-export default Room
+      </div>
+    );
+  };
+  
+  export default Room;

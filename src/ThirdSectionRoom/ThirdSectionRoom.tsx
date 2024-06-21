@@ -12,9 +12,6 @@ const ThirdSectionRoom = () => {
     setRoomIndex(roomIndex);
    };
     
-   /*  */
-    //const rooms = [Room1, Room2, Room3];
-    
     
     return (
         <section className={styles.rooms} id="part2">
