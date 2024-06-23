@@ -17,7 +17,7 @@ const ButtonSend: React.FC<IButtonSend> = ({ className, /*closeForm*/ }) => {
     const handleClick = () => {
         setIsModalOpen(true);
         //closeForm(false);
-        
+
     };
 
     return (

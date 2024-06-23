@@ -1,32 +1,32 @@
 .footerMain {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 75.5px;
-    border-bottom: rgb(224, 224, 224) 1px solid;
-    padding: 0 100px 0 100px;
-  }
-  
-  .footerInfo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 45.5px;
-    padding: 0 198px 0 198px;
-  }
-  
-  .copyright {
-    font-size: 12px;
-    color: gray;
-  }
-  
-  .policytext {
-    font-size: 12px;
-    color: gray;
-    text-decoration: none;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75.5px;
+  border-bottom: rgb(224, 224, 224) 1px solid;
+  padding: 0 100px 0 100px;
+}
 
-  .footerLogo {
-    position: relative;
-    left: 98px;
-  }
+.footerInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45.5px;
+  padding: 0 198px 0 198px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: gray;
+}
+
+.policytext {
+  font-size: 12px;
+  color: gray;
+  text-decoration: none;
+}
+
+.footerLogo {
+  position: relative;
+  left: 98px;
+}

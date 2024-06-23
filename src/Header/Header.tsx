@@ -8,8 +8,8 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <Logo className={styles.headerLogo}/>
-            <Navigation/>
+            <Logo className={styles.headerLogo} />
+            <Navigation />
         </header>
     );
 };

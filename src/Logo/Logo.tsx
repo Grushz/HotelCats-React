@@ -1,14 +1,14 @@
 import styles from './Logo.module.scss';
-import logo from  '../../public/images/logo.svg'
+import logo from '../../public/images/logo.svg'
 
 interface ILogo {
     className: string;
 }
 
-const Logo = ({className}: ILogo) => {
+const Logo = ({ className }: ILogo) => {
     return (
         <a className={`${styles.logo} ${className}`} href="#">
-            <img src={logo} alt="Логотип Котейка"/>
+            <img src={logo} alt="Логотип Котейка" />
         </a>
     );
 };

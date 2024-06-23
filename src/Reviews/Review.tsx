@@ -1,4 +1,4 @@
-import Styles from './Reviews.module.scss';
+import styles from './Reviews.module.scss';
 
 
 const reviewsData = [
@@ -26,13 +26,13 @@ const reviewsData = [
 const reviewsAll = reviewsData.map((review) => {
     return (
 
-        <div className={Styles.review} key={review.id}>
-            <div className={Styles.reviewInfo}>
-                <p className={Styles.reviewText}>{review.text}</p>
+        <div className={styles.review} key={review.id}>
+            <div className={styles.reviewInfo}>
+                <p className={styles.reviewText}>{review.text}</p>
             </div>
-            <div className={Styles.reviewDetail} key={review.id}>
-                <div className={Styles.reviewName}>{review.name}</div>
-                <div className={Styles.reviewDate}>{review.date}</div>
+            <div className={styles.reviewDetail} key={review.id}>
+                <div className={styles.reviewName}>{review.name}</div>
+                <div className={styles.reviewDate}>{review.date}</div>
             </div>
         </div>
 

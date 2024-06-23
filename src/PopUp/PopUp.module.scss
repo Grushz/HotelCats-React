@@ -227,15 +227,60 @@
 }
 
 /* Стилизация placeholder */
-.personinfo::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.personinfo::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.personinfo:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.personinfo:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.personinfo:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
-.personinfo:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
-.personinfo:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
-.personinfo:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
-.personinfo::-webkit-input-placeholder { color: #000000; }
-.personinfo::-moz-placeholder          { color: #000000; } /*Firefox 19+*/
-.personinfo:-moz-placeholder           { color: #000000; } /*Firefox 18-*/
-.personinfo:-ms-input-placeholder      { color: #000000; }
+.personinfo::-webkit-input-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+
+.personinfo::-moz-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+
+.personinfo:-moz-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+
+.personinfo:-ms-input-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+
+.personinfo:focus::-webkit-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+
+.personinfo:focus::-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+
+.personinfo:focus:-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+
+.personinfo:focus:-ms-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+
+.personinfo::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.personinfo::-moz-placeholder {
+  color: #000000;
+}
+
+/*Firefox 19+*/
+.personinfo:-moz-placeholder {
+  color: #000000;
+}
+
+/*Firefox 18-*/
+.personinfo:-ms-input-placeholder {
+  color: #000000;
+}

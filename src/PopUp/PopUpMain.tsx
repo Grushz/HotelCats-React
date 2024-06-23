@@ -15,9 +15,9 @@ const PopUp: React.FC<IPopUpProps> = ({ setIsCloseMain }) => {
     const inputForm = [
         {
             id: 0,
-          type: 'text',
-          name: 'username',
-          placegolder: 'Ваше имя',
+            type: 'text',
+            name: 'username',
+            placegolder: 'Ваше имя',
         },
         {
             id: 1,
@@ -37,38 +37,38 @@ const PopUp: React.FC<IPopUpProps> = ({ setIsCloseMain }) => {
             name: 'e-mail',
             placegolder: 'E-mail',
         }
-        
-      ];
 
-      const input = inputForm.map((item) => {
+    ];
+
+    const input = inputForm.map((item) => {
         return (
             <input className={styles.personinfo} type={item.type} name={item.name} placeholder={item.placegolder} />
         );
-      });
+    });
 
-return (
-    <div className={styles.popupWrapper}>
-        <div className={styles.popupWrapperInner}>
-            <form className={styles.formMain} onSubmit={handleSubmit}>
-                <div className={styles.popup}>
-                    <button className={styles.close} onClick={() => setIsCloseMain(false)}>
-                    </button>
-                    <h2 className={styles.popuptitle}>Забронировать номер</h2>
-                    {input}
-                    <div className={styles.inputDate}>
-                        <label>Дата заезда с </label>
-                        <input type="text" className={styles.date} name="datein" placeholder="26.01.2020" />
-                        <label> по </label>
-                        <input type="text" className={styles.date} name="dateout" placeholder="26.02.2020" />
+    return (
+        <div className={styles.popupWrapper}>
+            <div className={styles.popupWrapperInner}>
+                <form className={styles.formMain} onSubmit={handleSubmit}>
+                    <div className={styles.popup}>
+                        <button className={styles.close} onClick={() => setIsCloseMain(false)}>
+                        </button>
+                        <h2 className={styles.popuptitle}>Забронировать номер</h2>
+                        {input}
+                        <div className={styles.inputDate}>
+                            <label>Дата заезда с </label>
+                            <input type="text" className={styles.date} name="datein" placeholder="26.01.2020" />
+                            <label> по </label>
+                            <input type="text" className={styles.date} name="dateout" placeholder="26.02.2020" />
+                        </div>
+                        <ButtonSend className={styles.buttonReservation} closeForm={setIsCloseMain} />
                     </div>
-                    <ButtonSend className={styles.buttonReservation} closeForm={setIsCloseMain}/>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
 
 
-    </div >
-);
+        </div >
+    );
 }
 
 export default PopUp;

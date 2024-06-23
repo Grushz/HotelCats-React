@@ -1,84 +1,84 @@
 @import "/src/assets/mixinStyle.scss";
 
 .contact {
-    width: 100%;
-    display: flex;
-    padding-top: 140px;
-    position: relative;
-    box-sizing: border-box;
-  }
-  
-  .contactTitle {
-    @include reset;
-    height: 34px;
-    display: block;
-    padding-top: 60px;
-    padding-bottom: 25px;
-    text-align: left;
-    font-size: 34px;
-    width: 270px;
-    @include middleTitle;
-    
-  }
-  
-  .contactInfo {
-    background-color: rgb(250, 198, 99);
-    width: 370px;
-    height: 580px;
-    padding-left: 198px;
-  }
-  
-  .contactHead {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-  
-  .contactText {
-    margin-bottom: 30px;
-    font-size: 15px;
-    list-style: none;
-    width: 250px;
-    @include reset;
-  }
-  
-  .socialIcons {
-    margin-right: 15px;
-    text-decoration: none;
-  }
-  
-  .icon:hover {
-    transition: 300ms ease-in-out;
-    transform: scale(1.4);
-  }
-  
-  .map {
-    display: inline-block;
-    position: absolute;
-    width: 797px;
-    height: 580px;
-    overflow: hidden;
-    left: 569px;
-    z-index: -1;
-  }
-  
-  .mapicon {
-    top: 335px;
-    position: absolute;
-    right: 260px;
-  }
+  width: 100%;
+  display: flex;
+  padding-top: 140px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.contactTitle {
+  @include reset;
+  height: 34px;
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 25px;
+  text-align: left;
+  font-size: 34px;
+  width: 270px;
+  @include middleTitle;
+
+}
+
+.contactInfo {
+  background-color: rgb(250, 198, 99);
+  width: 370px;
+  height: 580px;
+  padding-left: 198px;
+}
+
+.contactHead {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.contactText {
+  margin-bottom: 30px;
+  font-size: 15px;
+  list-style: none;
+  width: 250px;
+  @include reset;
+}
+
+.socialIcons {
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.icon:hover {
+  transition: 300ms ease-in-out;
+  transform: scale(1.4);
+}
+
+.map {
+  display: inline-block;
+  position: absolute;
+  width: 797px;
+  height: 580px;
+  overflow: hidden;
+  left: 569px;
+  z-index: -1;
+}
+
+.mapicon {
+  top: 335px;
+  position: absolute;
+  right: 260px;
+}
 
 .mapIframe {
-  width:798px ;
-  height: 582px; 
-   
-  position:relative;
+  width: 798px;
+  height: 582px;
+
+  position: relative;
 }
 
 .link {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 
-    &:hover {
-        font-weight: 700;
-}
+  &:hover {
+    font-weight: 700;
+  }
 }

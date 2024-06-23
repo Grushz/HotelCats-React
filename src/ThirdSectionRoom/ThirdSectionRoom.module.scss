@@ -1,17 +1,17 @@
 @import "/src/assets/mixinStyle.scss";
 
 .roomsTitle {
-    text-align: center;
-    margin-top: 140px;
-    padding-bottom: 70px;
+  text-align: center;
+  margin-top: 140px;
+  padding-bottom: 70px;
 
-    @include middleTitle;
-  }
-  
-  
-  .rooms {
-    position: relative;
-  
+  @include middleTitle;
+}
+
+
+.rooms {
+  position: relative;
+
 
   &::before {
     content: url("images/fishBack.svg");
@@ -23,8 +23,8 @@
 
 .show {
   visibility: visible;
-    animation: show 1s ease;
-    opacity: 1;
+  animation: show 1s ease;
+  opacity: 1;
 }
 
 .hidden {
