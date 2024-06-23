@@ -1,7 +1,5 @@
 import styles from "./Navigation.module.scss";
 
-
-
 const Navigation = () => {
     const items: { title: string; href: string }[] = [
         { title: 'Почему мы?', href: '#part1' },

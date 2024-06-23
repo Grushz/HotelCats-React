@@ -29,8 +29,6 @@ const Changer = ({ onChange }: { onChange: (roomIndex: number) => void }) => {
     console.log(prevIndex);
   };
 
-
-
   return (
     <div className={styles.changer}>
       <div className={styles.dot}>

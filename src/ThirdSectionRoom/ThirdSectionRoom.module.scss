@@ -8,10 +8,8 @@
   @include middleTitle;
 }
 
-
 .rooms {
   position: relative;
-
 
   &::before {
     content: url("images/fishBack.svg");

@@ -1,10 +1,11 @@
 import styles from './PopUp.module.scss';
 import ButtonSend from '../Buttons/ButtonSend';
 import { FormEvent } from 'react';
+import { inputForm } from './dataPopUp';
 
 interface IPopUpProps {
     setIsCloseMain: (isModalOpenM: boolean) => void;
-}
+};
 
 const PopUp: React.FC<IPopUpProps> = ({ setIsCloseMain }) => {
 
@@ -12,37 +13,9 @@ const PopUp: React.FC<IPopUpProps> = ({ setIsCloseMain }) => {
         e.preventDefault();
     }
 
-    const inputForm = [
-        {
-            id: 0,
-            type: 'text',
-            name: 'username',
-            placegolder: 'Ваше имя',
-        },
-        {
-            id: 1,
-            type: 'text',
-            name: 'petname',
-            placegolder: 'Имя Питомца',
-        },
-        {
-            id: 2,
-            type: 'tel',
-            name: 'phone-number',
-            placegolder: 'Телефон',
-        },
-        {
-            id: 3,
-            type: 'email',
-            name: 'e-mail',
-            placegolder: 'E-mail',
-        }
-
-    ];
-
     const input = inputForm.map((item) => {
         return (
-            <input className={styles.personinfo} type={item.type} name={item.name} placeholder={item.placegolder} />
+            <input className={styles.personinfo} key={item.id} type={item.type} name={item.name} placeholder={item.placegolder} />
         );
     });
 
@@ -65,8 +38,6 @@ const PopUp: React.FC<IPopUpProps> = ({ setIsCloseMain }) => {
                     </div>
                 </form>
             </div>
-
-
         </div >
     );
 }

@@ -1,61 +1,11 @@
 import styles from './FifthSectionContacts.module.scss';
-
+import { localContacts, contactsE, social } from './dataFifthSection.ts';
 
 const FifthSectionContacts = () => {
 
-    const localContacts = [
-        {
-            id: 0,
-            head: 'Адрес',
-            text: 'Санкт-Петербург, ул Большая Конюшенная, д 19',
-        },
-        {
-            id: 1,
-            head: 'Режим работы',
-            text: 'Ежедневно с 9:00 до 20:00',
-        }
-    ];
-    const contactsE = [
-        {
-            id: 0,
-            head: 'Телефон',
-            link: 'tel:+7 (800) 333 55 99',
-            text: '8 (800) 333-55-99',
-        },
-        {
-            id: 1,
-            head: 'E-mail',
-            link: 'mailto:info@cat-hotel.ru',
-            text: 'info@cat-hotel.ru',
-        }
-    ];
-    const social = [
-        {
-            id: 0,
-            head: 'Facebook',
-            link: '#',
-            picture: 'images/facebook.svg',
-            text: 'Facebook',
-        },
-        {
-            id: 1,
-            head: 'Instagram',
-            link: '#',
-            picture: 'images/instagram.svg',
-            text: 'Instagram',
-        },
-        {
-            id: 2,
-            head: 'Vkontakte',
-            link: '#',
-            picture: 'images/vk.svg',
-            text: 'Vkontakte',
-        }
-    ];
-
     const first = localContacts.map((item) => {
         return (
-            <li key={item.head} className={styles.contactText}>
+            <li key={item.id} className={styles.contactText}>
                 <h3 className={styles.contactHead}>{item.head}</h3>
                 <p className={styles.text}>{item.text}</p>
             </li>
@@ -64,7 +14,7 @@ const FifthSectionContacts = () => {
 
     const second = contactsE.map((item) => {
         return (
-            <li key={item.head} className={styles.contactText}>
+            <li key={item.id} className={styles.contactText}>
                 <h3 className={styles.contactHead}>{item.head}</h3>
                 <a className={styles.link} href={item.link} target="_blank">{item.text}</a>
             </li>

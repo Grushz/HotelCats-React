@@ -2,9 +2,9 @@ import styles from './PopUp.module.scss';
 
 interface IPopUpProps {
     setIsClose: (isModalOpen: boolean) => void;
-}
-const PopUpAccept: React.FC<IPopUpProps> = ({ setIsClose }) => {
+};
 
+const PopUpAccept: React.FC<IPopUpProps> = ({ setIsClose }) => {
     return (
         <div className={styles.popupWrapper} >
             <div className={styles.popupWrapperInner}>
