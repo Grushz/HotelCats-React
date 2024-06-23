@@ -7,11 +7,7 @@ interface DotState {
   activeIndex: number; // Индекс активной точки
 }
 
-
-
-
-
-const Changer = ({onChange}: {onChange: (roomIndex: number) => void}) => {
+const Changer = ({ onChange }: { onChange: (roomIndex: number) => void }) => {
   const [State, setDotState] = useState<DotState>({ activeIndex: 0 }); // Состояние точек
 
   const handleSliderDotClick = (index: number) => {
@@ -21,20 +17,20 @@ const Changer = ({onChange}: {onChange: (roomIndex: number) => void}) => {
   };
 
   const handleArrowNextClick = () => {
-    const nextIndex = (State.activeIndex + 1) % 3; 
+    const nextIndex = (State.activeIndex + 1) % 3;
     setDotState({ activeIndex: nextIndex });
-    onChange(nextIndex); 
+    onChange(nextIndex);
   };
 
   const handleArrowBackClick = () => {
-    const prevIndex = (State.activeIndex - 1 + 3) % 3; 
-    setDotState({ activeIndex: prevIndex }); 
-    onChange(prevIndex); 
+    const prevIndex = (State.activeIndex - 1 + 3) % 3;
+    setDotState({ activeIndex: prevIndex });
+    onChange(prevIndex);
     console.log(prevIndex);
   };
 
-  
-  
+
+
   return (
     <div className={Styles.changer}>
       <div className={Styles.dot}>
