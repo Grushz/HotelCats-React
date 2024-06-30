@@ -1,11 +1,9 @@
 import './App.css'
 import Header from "../Header/Header.tsx";
-import FirstSectionPicture from '../FirstSectionPicture/FirstSectionPicture.tsx';
-import SecondSectionAdvanteges from '../SecondSectionAdvantages/SecondSectionAdvantages.tsx';
-import ThirdSectionRoom from '../ThirdSectionRoom/ThirdSectionRoom.tsx';
-import FourthSectionReview from '../FourthSectionReview/FourthSectionReview.tsx';
-import FifthSectionContacts from '../FifthSectionContacts/FifthSectionContacts.tsx';
 import Footer from '../Footer/Footer.tsx';
+import { Routes, Route} from 'react-router-dom';
+import MainPage from '../Pages/MainPage.tsx';
+import CatalogPage from '../Pages/CatalogPage.tsx';
 // import PopUp from '../PopUp/PopUpMain.tsx';
 
 
@@ -14,16 +12,14 @@ function App() {
 
     return (
         <>
-    
             <Header/>
             <main>
-                <FirstSectionPicture/>
-                <SecondSectionAdvanteges/>
-                <ThirdSectionRoom/>
-                <FourthSectionReview/>
-                <FifthSectionContacts/>
-                
-                
+            <Routes>
+            
+                <Route path="/" element={<MainPage/>}/>
+                <Route path="/catalog" element={<CatalogPage/>}/>
+            
+            </Routes>
             </main>
             <Footer/>
         </>

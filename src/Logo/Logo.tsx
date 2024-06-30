@@ -7,7 +7,7 @@ interface ILogo {
 
 const Logo = ({ className }: ILogo) => {
     return (
-        <a className={`${styles.logo} ${className}`} href="#">
+        <a className={`${styles.logo} ${className}`} href="/">
             <img src={logo} alt="Логотип Котейка" />
         </a>
     );
