@@ -5,7 +5,7 @@ import { inputForm } from './dataPopUp';
 
 interface IPopUpProps {
     setIsCloseMain: (isModalOpenM: boolean) => void;
-};
+}
 
 const PopUp: React.FC<IPopUpProps> = ({ setIsCloseMain }) => {
 

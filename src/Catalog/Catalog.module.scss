@@ -1,0 +1,24 @@
+@import "/src/assets/mixinStyle.scss";
+
+.catalogContainer {
+    width: 100%;
+  display: flex;
+  
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+.catalogTitle {
+    @include reset;
+    @include middleTitle;
+    text-align: left;
+    margin-top: 70px;
+    padding-bottom: 60px;
+  
+    
+  }
+  
+  .filterTitle {
+    @include reset;
+  }
