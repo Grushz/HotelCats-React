@@ -1,24 +1,89 @@
 @import "/src/assets/mixinStyle.scss";
 
 .catalogContainer {
-    width: 100%;
+  width: 100%;
   display: flex;
-  
   position: relative;
   box-sizing: border-box;
 }
 
 
 .catalogTitle {
-    @include reset;
-    @include middleTitle;
-    text-align: left;
-    margin-top: 70px;
-    padding-bottom: 60px;
+  @include reset;
+  @include middleTitle;
+  text-align: left;
+  margin-top: 70px;
+  padding-bottom: 60px;
+
+
+}
+
+.filterTitle {
+  @include reset;
+}
+
+.catalogFilter {
+  width: 245px;
+  margin-right: 55px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.cardTitle {
+  @include lowTitle;
+  @include reset;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.catalogContent {
+  display: grid;
+  grid-template-columns: 270px 270px 270px;
+  grid-template-rows: 408px 408px;
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+  width: 270px;
+  height: 408px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 14px;
+  @include reset;
+}
+
+.cardInfo {
+  margin: 15px 20px ;
   
-    
-  }
+}
+
+.buttonCard {
+  background-color: #ff7236;
+  color: white;
+  margin-top: 15px;
+  margin-left: 20px;
+  width: 230px;
   
-  .filterTitle {
-    @include reset;
+  &::after {
+      content: url("images/paw-rev.svg");
+      position: absolute;
+      right: 7px;
+      top: 7px;
   }
+
+  &:hover {
+      transform: scale(1.1);
+  }
+}
