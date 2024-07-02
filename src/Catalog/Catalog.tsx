@@ -82,7 +82,7 @@ const Catalog = () => {
             name: 'Эконом',
             size: '90х70х100',
             area: '0,63 м',
-            items: '',
+            items: 'images/NoItems.svg',
             price: '100',
         },
         {
@@ -153,7 +153,7 @@ const Catalog = () => {
                 <div className={styles.cardInfo}>
                 <p className={styles.text}>Размеры (ШxГxВ) - {item.size} см</p>
                 <p className={styles.text}>Площадь - {item.area}<sup><small>2</small></sup></p>
-                <p className={styles.text}>Оснащение номера {item.items}</p>
+                <p className={styles.text}>Оснащение номера {item.items}</p><img src={item.items}/>
                 <p className={styles.text}>Цена за сутки <b className={styles.price}>{item.price}&#8381;</b></p>
                 </div>
                 <ButtonReservation className={styles.buttonCard}/>

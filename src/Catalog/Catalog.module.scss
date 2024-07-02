@@ -15,7 +15,6 @@
   margin-top: 70px;
   padding-bottom: 60px;
 
-
 }
 
 .filterTitle {
@@ -40,7 +39,7 @@
 .catalogContent {
   display: grid;
   grid-template-columns: 270px 270px 270px;
-  grid-template-rows: 408px 408px;
+  grid-template-rows: 428px 428px;
   column-gap: 30px;
   row-gap: 30px;
   justify-content: center;
@@ -51,7 +50,7 @@
 .card {
   box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
   width: 270px;
-  height: 408px;
+  height: 428px;
 }
 
 .price {
@@ -60,8 +59,9 @@
 }
 
 .text {
-  font-size: 14px;
   @include reset;
+  font-size: 14px;
+  margin-bottom: 7px;
 }
 
 .cardInfo {
@@ -71,16 +71,19 @@
 
 .buttonCard {
   background-color: #ff7236;
+  box-sizing: border-box;
   color: white;
   margin-top: 15px;
   margin-left: 20px;
   width: 230px;
+  height: 46px;
+  padding-left: 50px;
   
   &::after {
       content: url("images/paw-rev.svg");
       position: absolute;
-      right: 7px;
-      top: 7px;
+      right: 5px;
+      top: 5px;
   }
 
   &:hover {
