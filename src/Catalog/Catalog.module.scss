@@ -62,6 +62,8 @@
   @include reset;
   font-size: 14px;
   margin-bottom: 7px;
+  margin-right: 12px;
+  white-space: nowrap;
 }
 
 .cardInfo {
@@ -89,4 +91,15 @@
   &:hover {
       transform: scale(1.1);
   }
+}
+
+.roomItems {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.includeItems {
+  padding-right: 8px;
+  padding-bottom: 5px;
+  
 }

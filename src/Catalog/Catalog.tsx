@@ -82,7 +82,7 @@ const Catalog = () => {
             name: 'Эконом',
             size: '90х70х100',
             area: '0,63 м',
-            items: 'images/NoItems.svg',
+            items: <img className={styles.includeItems} src="images/NoItems.svg"/>,
             price: '100',
         },
         {
@@ -91,7 +91,7 @@ const Catalog = () => {
             name: 'Эконом плюс',
             size: '90х100х180',
             area: '0,90 м',
-            items: '',
+            items: <><img className={styles.includeItems} src="images/bed.svg"/><img className={styles.includeItems} src="images/scratchingPost.svg"/></>,
             price: '200',
         },
         {
@@ -100,7 +100,7 @@ const Catalog = () => {
             name: 'Комфорт',
             size: '100х125х180',
             area: '1,13 м',
-            items: '',
+            items: <><img className={styles.includeItems} src="images/bed.svg"/><img className={styles.includeItems} src="images/scratchingPost.svg"/><img className={styles.includeItems} src="images/toys.svg"/></>,
             price: '250',
         },
         {
@@ -109,7 +109,7 @@ const Catalog = () => {
             name: 'Сьют',
             size: '125х125х180',
             area: '1,56 м',
-            items: '',
+            items: <><img className={styles.includeItems} src="images/bed.svg"/><img className={styles.includeItems} src="images/scratchingPost.svg"/><img className={styles.includeItems} src="images/toys.svg"/></>,
             price: '350',
         },
         {
@@ -118,7 +118,7 @@ const Catalog = () => {
             name: 'Люкс',
             size: '160х160х180',
             area: '2,56 м',
-            items: '',
+            items: <><img className={styles.includeItems} src="images/bed.svg"/><img className={styles.includeItems} src="images/scratchingPost.svg"/><img className={styles.includeItems} src="images/toys.svg"/><img className={styles.includeItems} src="images/home.svg"/></>,
             price: '500',
         },
         {
@@ -127,7 +127,7 @@ const Catalog = () => {
             name: 'Супер-Люкс',
             size: '180х160х180',
             area: '2,88 м',
-            items: '',
+            items: <><img className={styles.includeItems} src="images/bed.svg"/><img className={styles.includeItems} src="images/scratchingPost.svg"/><img className={styles.includeItems} src="images/toys.svg"/><img className={styles.includeItems} src="images/home.svg"/></>,
             price: '600',
         },
     ];
@@ -153,7 +153,7 @@ const Catalog = () => {
                 <div className={styles.cardInfo}>
                 <p className={styles.text}>Размеры (ШxГxВ) - {item.size} см</p>
                 <p className={styles.text}>Площадь - {item.area}<sup><small>2</small></sup></p>
-                <p className={styles.text}>Оснащение номера {item.items}</p><img src={item.items}/>
+                <div className={styles.roomItems}><p className={styles.text}>Оснащение номера </p> {item.items}</div>
                 <p className={styles.text}>Цена за сутки <b className={styles.price}>{item.price}&#8381;</b></p>
                 </div>
                 <ButtonReservation className={styles.buttonCard}/>
