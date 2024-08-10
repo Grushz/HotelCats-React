@@ -1,0 +1,72 @@
+@import "/src/assets/mixinStyle.scss";
+
+.mainPicture {
+    width: 1170px;
+    height: 379px;
+    margin: 0 auto;
+    margin-top: 140px;
+    background-image: url("public/images/bannerCatalog.jpeg");
+}
+
+.adPictureContent {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    margin-left: 270px;
+    padding-top: 78px;
+}
+
+.mainAd {
+    @include reset;
+    font-size: 34px;
+    font-family: "Rubik", Arial, sans-serif;
+    z-index: 2;
+    position: relative;
+    
+
+}
+
+.mainAdText {
+    @include reset;
+    font-size: 56px;
+}
+
+
+.mainText {
+    @include reset;
+    width: 270px;
+    font-family: "Rubik", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    padding-top: 5px;
+    z-index: 2;
+    @include reset
+}
+
+
+.button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-top: 40px;
+
+    &::after {
+        content: url("images/paw.svg");
+        position: absolute;
+        right: 7px;
+        top: 7px;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: #ff7236;
+        color: white;
+    }
+
+    &:hover::after {
+        content: url("images/paw-rev.svg");
+        position: absolute;
+        right: 7px;
+        top: 7px;
+    }
+}

@@ -1,6 +1,6 @@
 import './App.css'
-import Header from "../Header/Header.tsx";
-import Footer from '../Footer/Footer.tsx';
+import Header from "../Components/Header/Header.tsx";
+import Footer from '../Components/Footer/Footer.tsx';
 import { Routes, Route} from 'react-router-dom';
 import MainPage from '../Pages/MainPage.tsx';
 import CatalogPage from '../Pages/CatalogPage.tsx';

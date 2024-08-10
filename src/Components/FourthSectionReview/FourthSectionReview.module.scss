@@ -1,0 +1,88 @@
+@import "/src/assets/mixinStyle.scss";
+
+@keyframes right1 {
+  from {
+    transform: translateX(0px); 
+    
+  }
+  to {
+    transform: translateX(-250px);
+    /* Optional: Add a slight downward movement */
+  }
+}
+@keyframes right2 {
+  from {
+    
+    transform: translateX(-250px); /* Optional: Add a slight upward movement */
+  }
+  to {
+    
+    transform: translateX(-500px); /* Optional: Add a slight downward movement */
+  }
+}
+@keyframes left1 {
+  from {
+    
+    transform: translateX(-500px); /* Optional: Add a slight upward movement */
+  }
+  to {
+    
+    transform: translateX(-250px); /* Optional: Add a slight downward movement */
+  }
+}
+@keyframes left2 {
+  from {
+    
+    transform: translateX(-250px); /* Optional: Add a slight upward movement */
+  }
+  to {
+    
+    transform: translateX(0px); /* Optional: Add a slight downward movement */
+  }
+}
+
+
+.reviews {
+  position: relative;
+
+  &::after {
+    content: url("images/pawDown.svg");
+    position: absolute;
+    top: -105px;
+    right: -35px;
+    z-index: 0;
+  }
+}
+
+.reviewsTitle {
+  display: block;
+  margin-top: 140px;
+  padding-bottom: 70px;
+  text-align: center;
+
+  @include middleTitle;
+}
+
+.reviewCard {
+  display: grid;
+  position: relative;
+  right: 0;
+  margin-left: 98px;
+  grid-template-columns: 470px 470px 470px;
+  grid-template-rows: 206px;
+  grid-column-gap: 30px;
+  margin-bottom: 55px;
+}
+
+.positionright1 {
+  animation: right1 0.5s ease forwards;
+}
+.positionright2 {
+  animation: right2 0.5s ease forwards;
+}
+.positionleft1 {
+  animation: left1 0.5s ease forwards;
+}
+.positionleft2 {
+  animation: left2 0.5s ease forwards;
+}

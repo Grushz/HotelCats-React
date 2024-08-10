@@ -1,0 +1,75 @@
+@import "/src/assets/mixinStyle.scss";
+
+.room {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 55px;
+    z-index: 5;
+    
+}
+
+.lowTitle {
+    @include lowTitle;
+}
+
+.roomImg {
+    width: 600px;
+    height: 404px;
+    position: relative;
+    left: 160px;
+    border-radius: 10px;
+    box-shadow: 0 0 21px -11px rgba(0, 0, 0, 0.72);
+}
+
+.roomInfo {
+    background-color: rgb(255, 255, 255);
+    width: 410px;
+    height: 284px;
+    border-radius: 10px;
+    position: relative;
+    right: 175px;
+    padding-left: 90px;
+    line-height: 2;
+    box-shadow: 0 0 21px -11px rgba(0, 0, 0, 0.72);
+}
+
+.roomList {
+    @include reset;
+    list-style: none;
+    width: 330px;
+    padding-left: 9px;
+    cursor: default;
+
+}
+
+.roomLi {
+    transition: 200ms ease-in-out;
+
+    &::before {
+        content: url("images/point.png");
+        position: relative;
+        right: 8px;
+    }
+
+    &:hover {
+        font-size: 19px;
+    }
+}
+
+.button {
+    background-color: #ff7236;
+    color: white;
+    margin-top: 25px;
+
+    &::after {
+        content: url("images/paw-rev.svg");
+        position: absolute;
+        right: 7px;
+        top: 7px;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}

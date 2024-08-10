@@ -1,17 +1,27 @@
-import FirstSectionPicture from '../FirstSectionPicture/FirstSectionPicture.tsx';
-import SecondSectionAdvanteges from '../SecondSectionAdvantages/SecondSectionAdvantages.tsx';
-import ThirdSectionRoom from '../ThirdSectionRoom/ThirdSectionRoom.tsx';
-import FourthSectionReview from '../FourthSectionReview/FourthSectionReview.tsx';
-import FifthSectionContacts from '../FifthSectionContacts/FifthSectionContacts.tsx';
+import FirstSectionPicture from '../Components/FirstSectionPicture/FirstSectionPicture.tsx';
+import SecondSectionAdvanteges from '../Components/SecondSectionAdvantages/SecondSectionAdvantages.tsx';
+import ThirdSectionRoom from '../Components/ThirdSectionRoom/ThirdSectionRoom.tsx';
+import FourthSectionReview from '../Components/FourthSectionReview/FourthSectionReview.tsx';
+import FifthSectionContacts from '../Components/FifthSectionContacts/FifthSectionContacts.tsx';
+import { useState } from 'react';
+import PopUp from '../Components/PopUp/PopUpMain';
 
 function MainPage() {
+
+    const [isMainModalOpen, setIsMainModalOpen] = useState<boolean>(false);
+    const handleModalOpen = (isModalOpenM: boolean) => {
+        setIsMainModalOpen(isModalOpenM);
+    };
+    
+
     return (
         <>
-            <FirstSectionPicture />
+            <FirstSectionPicture openPopUp={handleModalOpen}/>
             <SecondSectionAdvanteges />
-            <ThirdSectionRoom />
+            <ThirdSectionRoom openPopUp={handleModalOpen} />
             <FourthSectionReview />
             <FifthSectionContacts />
+            {isMainModalOpen && <PopUp setIsCloseMain={handleModalOpen} />}
         </>
     )
 }
