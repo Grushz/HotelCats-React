@@ -1,36 +1,36 @@
 export const areaCheckBox = [
     {
-        id: 1,
+        id: 101,
         type: 'checkbox',
         name: 'area',
         placeholder: '0,63 м2',
     },
     {
-        id: 2,
+        id: 102,
         type: 'checkbox',
         name: 'area',
         placeholder: '0,90 м2',
     },
     {
-        id: 3,
+        id: 103,
         type: 'checkbox',
         name: 'area',
         placeholder: '1,13 м2',
     },
     {
-        id: 4,
+        id: 104,
         type: 'checkbox',
         name: 'area',
         placeholder: '1,56 м2',
     },
     {
-        id: 5,
+        id: 105,
         type: 'checkbox',
         name: 'area',
         placeholder: '2,56 м2',
     },
     {
-        id: 6,
+        id: 106,
         type: 'checkbox',
         name: 'area',
         placeholder: '2,88 м2',
@@ -39,31 +39,31 @@ export const areaCheckBox = [
 
 export const itemsCheckBox = [
     {
-        id: 1,
+        id: 11,
         type: 'checkbox',
         name: 'area',
         placeholder: 'Пустой номер',
     },
     {
-        id: 2,
+        id: 12,
         type: 'checkbox',
         name: 'area',
         placeholder: 'Лежак',
     },
     {
-        id: 3,
+        id: 13,
         type: 'checkbox',
         name: 'area',
         placeholder: 'Когтеточка',
     },
     {
-        id: 4,
+        id: 14,
         type: 'checkbox',
         name: 'area',
         placeholder: 'Игровой-комплекс',
     },
     {
-        id: 5,
+        id: 15,
         type: 'checkbox',
         name: 'area',
         placeholder: 'Домик',
