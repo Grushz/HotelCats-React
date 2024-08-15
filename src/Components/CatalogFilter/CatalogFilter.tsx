@@ -13,7 +13,7 @@ interface IState {
     checked: boolean,
 };
 
-let initialState: IState[] = [
+const initialState: IState[] = [
 { id: 101, title: "Title1", checked: false },
 { id: 102, title: "Title2", checked: false },
 { id: 103, title: "Title3", checked: false },
@@ -36,11 +36,22 @@ const checkHandler = (id: number) => {
       );
 };
 
+function startFilterHandler(checked: IState[]) {
+const startFilter = checked.filter(checked => {
+    return checked.checked === true;
+});
+
+console.log(startFilter);
+};
 
 
+const clearFilter = () => {
+    //document.getElementsByClassName('inputArea') = false;
+    setChecked(initialState);
+};
 const inputArea = areaCheckBox.map((item) => {
     return (
-        <label> <input className={styles.inputArea} key={item.id} type={item.type}  onChange={() => checkHandler(item.id)} /> {item.placeholder}</label>
+        <label> <input className={styles.inputArea} key={item.id}  type={item.type}  onChange={() => checkHandler(item.id)} /> {item.placeholder}</label>
     );
 });
 
@@ -66,8 +77,8 @@ return (
                         {inputArea}
                         <p className={styles.filterText}>Оснащение номера</p>
                         {inputRoomItems}
-                        <button className={styles.buttonFilter} onClick={() => console.log(checked)}>Применить</button>
-                        <button className={styles.buttonFilterDisline} >Сбросить фильтр</button>
+                        <button className={styles.buttonFilter} onClick={() => startFilterHandler(checked)}>Применить</button>
+                        <button className={styles.buttonFilterDisline} onClick={() => clearFilter()}>Сбросить фильтр</button>
                     </div>
 );
 

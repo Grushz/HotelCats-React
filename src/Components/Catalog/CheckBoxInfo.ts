@@ -126,3 +126,4 @@ export const cards = [
         price: '600',
     },
 ];
+

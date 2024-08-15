@@ -5,9 +5,6 @@ import CatalogFilter from '../CatalogFilter/CatalogFilter';
 
 const Catalog = ({ openPopUp }: { openPopUp: (isMainModalOpen: boolean) => void }) => {
 
-    
-
-
    
     const cardsRooms = cards.map((item) => {
         return (
