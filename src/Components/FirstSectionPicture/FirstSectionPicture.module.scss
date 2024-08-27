@@ -2,7 +2,7 @@
 
 .mainPicture {
     height: 504px;
-    background-image: url("public/images/mainCat.jpeg");
+    background-image: url("images/mainCat.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@
     @include reset;
 
     &::before {
-        content: url("public/images/Mask Group.png");
+        content: url("images/Mask Group.png");
         position: absolute;
     }
 }

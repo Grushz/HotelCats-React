@@ -1,5 +1,5 @@
 import styles from './Logo.module.scss';
-import logo from '../../../public/images/logo.svg';
+import logo from '/images/logo.svg';
 
 interface ILogo {
     className: string;

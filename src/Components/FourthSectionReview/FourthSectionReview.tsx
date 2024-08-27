@@ -30,7 +30,7 @@ const FourthSectionReview = () => {
         if (ReviewIndexPosition === -1) {
             setReviewPosition(styles.positionleft1);
         }
-        if (ReviewIndexPosition === -0) {
+        if (ReviewIndexPosition === 0) {
             setReviewPosition(styles.positionleft2);
         }
     };

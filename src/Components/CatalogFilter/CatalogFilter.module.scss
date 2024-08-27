@@ -3,6 +3,24 @@
 .filterTitle {
     @include reset;
   }
+  
+.placeholder {
+  padding-left: 8px;
+  font-size: 14px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+}
+
+.filterText{
+  @include reset;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
 
   .catalogFilter {
     width: 245px;
@@ -91,7 +109,6 @@
     position: relative;
   }
   
-  input[type="radio"],
   input[type="checkbox"] {
     appearance: none;
     background: #fff;

@@ -1,86 +1,145 @@
 
 import styles from './CatalogFilter.module.scss';
 import { areaCheckBox, itemsCheckBox } from '../Catalog/CheckBoxInfo';
-import { useState } from'react';
-
-
-
-const CatalogFilter = () => {
+import { cards } from '../Catalog/CheckBoxInfo';
+import { useState, useRef } from 'react';
 
 interface IState {
     id: number,
-    title: string,
+    type: string,
     checked: boolean,
+    item: string,
+};
+interface ICard {
+    id: number,
+    picture: string,
+    name: string,
+    size: string,
+    area: string,
+    items: string,
+    price: string,
 };
 
-const initialState: IState[] = [
-{ id: 101, title: "Title1", checked: false },
-{ id: 102, title: "Title2", checked: false },
-{ id: 103, title: "Title3", checked: false },
-{ id: 104, title: "Title4", checked: false },
-{ id: 105, title: "Title5", checked: false },
-{ id: 106, title: "Title6", checked: false },
-{ id: 11, title: "Title7", checked: false },
-{ id: 12, title: "Title8", checked: false },
-{ id: 13, title: "Title9", checked: false },
-{ id: 14, title: "Title10", checked: false },
-{ id: 15, title: "Title11", checked: false },
-];
+const CatalogFilter = ({ onChange }: { onChange: (cardsNew: ICard[]) => void }) => {
 
 
-const [checked, setChecked] = useState<IState[]>(initialState);
 
-const checkHandler = (id: number) => {
-    setChecked( prevState => 
-        prevState.map((item) => item.id === id? {...item, checked:!item.checked } : item)
-      );
-};
+    const [checked, setChecked] = useState<IState[]>(areaCheckBox);
+    const [checkedItems, setCheckedItems] = useState<IState[]>(itemsCheckBox);
 
-function startFilterHandler(checked: IState[]) {
-const startFilter = checked.filter(checked => {
-    return checked.checked === true;
-});
+    const checkHandlerSize = (id: number) => {
+        setChecked(prevState =>
+            prevState.map((item) => item.id === id ? { ...item, checked: !item.checked } : item)
+        );
+    };
 
-console.log(startFilter);
-};
+    const checkHandlerItems = (id: number) => {
+        setCheckedItems(prevState =>
+            prevState.map((item) => item.id === id ? { ...item, checked: !item.checked } : item)
+        );
+    };
+
+    const inputRef = useRef(null);
+
+    const getValue = () => {
+        if (inputRef.current) {
+            const inputValue = inputRef.current.value;
+            console.log('Input value:', inputValue);
+        }
+    };
+
+    /*const hadleChangeCards = (startFilter: IState, StartFilterItems: IState) => {
+        const cardsShowNew = cards.filter(cards => cards.area == startFilter.item);
+        const cardsShowNewItems = cardsShowNew.filter(cards => cards.items.match(StartFilterItems.item));
+        
+    }; */
+
+    function startFilterHandler(checked: IState[], checkedItems: IState[], cards: ICard[]) {
+        const startFilter = checked.filter(checked => {
+            return checked.checked === true;
+        });
+
+        const startFilterItems = checkedItems.filter(checkedItems => {
+            return checkedItems.checked === true;
+        });
+
+        const resultArea = startFilter.map(item => item.item).join(', ');
+        const resultItems = startFilterItems.map(item => item.item).join(', ');
+
+        const filteredCardsFirst = cards.filter(card => {
+            // Определяем слово, по которому будем фильтровать
+            const searchTerm = resultArea;
+
+            // Разделяем значения по запятой
+            const values = searchTerm.split(', ');
+
+            // Проверяем, содержится ли хотя бы одно значение из списка в card.area
+            return values.some(value =>
+                card.area.includes(value.trim())
+            );
+        });
+
+        const filteredCardsSecond = filteredCardsFirst.filter(card => {
+            const searchTerm = resultItems;
+
+            // Разделяем значения по пробелу
+            const values = searchTerm.split(', ');
+
+            // Проверяем, содержится ли хотя бы одно значение из списка в card.items
+            return values.some(value =>
+                card.items.includes(value)
+            );
+        });
+
+        onChange(filteredCardsSecond);
+    };
 
 
-const clearFilter = () => {
-    //document.getElementsByClassName('inputArea') = false;
-    setChecked(initialState);
-};
-const inputArea = areaCheckBox.map((item) => {
+    const clearFilter = () => {
+        setChecked(areaCheckBox);
+        setCheckedItems(itemsCheckBox);
+
+    };
+
+    const inputArea = checked.map((item) => {
+        return (
+            <div className={styles.input}>
+                <input className={styles.inputArea} key={item.id} checked={item.checked} type={item.type} onChange={() => checkHandlerSize(item.id)} />
+                <label className={styles.placeholder}> {item.item} м<sup><small>2</small></sup></label>
+            </div>
+        );
+    });
+
+    const inputRoomItems = checkedItems.map((item) => {
+        return (
+            <div className={styles.input}>
+                <input className={styles.inputRoomItems} key={item.id} checked={item.checked} type={item.type} onChange={() => checkHandlerItems(item.id)} />
+                <label className={styles.placeholder}> {item.item}</label>
+            </div>
+        );
+    });
+
+
+
+
+
     return (
-        <label> <input className={styles.inputArea} key={item.id}  type={item.type}  onChange={() => checkHandler(item.id)} /> {item.placeholder}</label>
+        <div className={styles.catalogFilter}>
+
+            <p className={styles.filterText}>Цена за сутки,&#8381;</p>
+            <div className={styles.priceFilter}>
+                <input ref={inputRef} className={styles.inputPrice} type="text" name="price" id="price" placeholder="от 100" />
+                <input className={styles.inputPrice} type="text" name="price" id="price" placeholder="до 600" />
+            </div>
+            <p className={styles.filterText}>Площадь</p>
+            {inputArea}
+            <p className={styles.filterText}>Оснащение номера</p>
+            {inputRoomItems}
+            <button className={styles.buttonFilter} onClick={() => startFilterHandler(checked, checkedItems, cards)}>Применить</button>
+            <button className={styles.buttonFilterDisline} onClick={() => clearFilter()}>Сбросить фильтр</button>
+
+        </div>
     );
-});
-
-const inputRoomItems = itemsCheckBox.map((item) => {
-    return (
-        <label> <input className={styles.inputRoomItems} key={item.id} type={item.type} onChange={() => checkHandler(item.id)} />{item.placeholder}</label>
-    );
-});
-
-
-
-
-
-return (
-    <div className={styles.catalogFilter}>
-                        
-                        <p className={styles.filterText}>Цена за сутки,&#8381;</p>
-                        <div className={styles.priceFilter}>    
-                        <input className={styles.inputPrice} type="text" name="price" id="price" placeholder="от 100" />
-                        <input className={styles.inputPrice} type="text" name="price" id="price" placeholder="до 600" />
-                        </div>
-                        <p className={styles.filterText}>Площадь</p>
-                        {inputArea}
-                        <p className={styles.filterText}>Оснащение номера</p>
-                        {inputRoomItems}
-                        <button className={styles.buttonFilter} onClick={() => startFilterHandler(checked)}>Применить</button>
-                        <button className={styles.buttonFilterDisline} onClick={() => clearFilter()}>Сбросить фильтр</button>
-                    </div>
-);
 
 };
 
