@@ -65,7 +65,9 @@ const CatalogFilter = ({ onChange }: { onChange: (cardsNew: ICard[]) => void }) 
 
         const resultArea = startFilter.map(item => item.item).join(', ');
         const resultItems = startFilterItems.map(item => item.item).join(', ');
-
+        if (resultArea.length > 0 && resultItems.length > 0) {
+            
+           
         const filteredCardsFirst = cards.filter(card => {
             // Определяем слово, по которому будем фильтровать
             const searchTerm = resultArea;
@@ -90,8 +92,14 @@ const CatalogFilter = ({ onChange }: { onChange: (cardsNew: ICard[]) => void }) 
                 card.items.includes(value)
             );
         });
-
         onChange(filteredCardsSecond);
+    }
+        else {
+            console.log('Массив пуст');
+            onChange([]);
+          }
+
+        
     };
 
 
