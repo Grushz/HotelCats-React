@@ -78,6 +78,7 @@ export const cards = [
         size: '90х70х100',
         area: '0,63',
         items: 'Пустой номер',
+        images: ['NoItems.svg'],
         price: '100',
     },
     {
@@ -87,6 +88,7 @@ export const cards = [
         size: '90х100х180',
         area: '0,90',
         items: 'Лежак Когтеточка',
+        images: ['bed.svg','scratchingPost.svg'],
         price: '200',
     },
     {
@@ -96,6 +98,7 @@ export const cards = [
         size: '100х125х180',
         area: '1,13',
         items: 'Лежак Когтеточка Игровой-комплекс',
+        images: ['bed.svg','scratchingPost.svg','toys.svg'],
         price: '250',
     },
     {
@@ -105,6 +108,7 @@ export const cards = [
         size: '125х125х180',
         area: '1,56',
         items: 'Лежак Когтеточка Игровой-комплекс',
+        images: ['bed.svg','scratchingPost.svg','toys.svg'],
         price: '350',
     },
     {
@@ -114,6 +118,7 @@ export const cards = [
         size: '160х160х180',
         area: '2,56',
         items: 'Лежак Когтеточка Игровой-комплекс Домик',
+        images: ['bed.svg','scratchingPost.svg','toys.svg','home.svg'],
         price: '500',
     },
     {
@@ -123,6 +128,7 @@ export const cards = [
         size: '180х160х180',
         area: '2,88',
         items: 'Лежак Когтеточка Игровой-комплекс Домик',
+        images: ['bed.svg','scratchingPost.svg','toys.svg','home.svg'],
         price: '600',
     },
 ];

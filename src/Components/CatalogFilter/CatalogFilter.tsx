@@ -17,6 +17,7 @@ interface ICard {
     size: string,
     area: string,
     items: string,
+    images: Array<string>,
     price: string,
 };
 
@@ -41,12 +42,12 @@ const CatalogFilter = ({ onChange }: { onChange: (cardsNew: ICard[]) => void }) 
 
     const inputRef = useRef(null);
 
-    const getValue = () => {
+   /* const getValue = () => {
         if (inputRef.current) {
             const inputValue = inputRef.current.value;
             console.log('Input value:', inputValue);
         }
-    };
+    }; */
 
     /*const hadleChangeCards = (startFilter: IState, StartFilterItems: IState) => {
         const cardsShowNew = cards.filter(cards => cards.area == startFilter.item);
